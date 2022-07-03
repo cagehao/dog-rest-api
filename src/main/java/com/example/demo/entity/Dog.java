@@ -1,9 +1,5 @@
 package com.example.demo.entity;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Dog {
@@ -29,36 +25,36 @@ public class Dog {
 
     public Dog() {}
 
-    public void setBreed(String breed) {
-        this.breed = breed;
+    public Long getId() {
+        return id;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setOrigin(String origin) {
-        origin = origin;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getBreed() {
         return breed;
     }
 
-    public String getName() {
-        return name;
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 
     public String getOrigin() {
         return origin;
     }
 
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
 }
+
